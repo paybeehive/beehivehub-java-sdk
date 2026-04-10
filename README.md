@@ -390,8 +390,9 @@ BeehiveHubClient beehive = new BeehiveHubClient(System.getenv("BEEHIVE_SECRET_KE
 
 ## Additional Documentation
 
-- [Official API Documentation](https://paybeehive.readme.io/reference)
-- [Integration Guide](https://paybeehive.readme.io/docs)
+- [Official API Documentation](https://docs.beehivehub.io/api-reference/transa%C3%A7%C3%B5es/listar-transa%C3%A7%C3%B5es)
+- [Integration Guide](https://docs.beehivehub.io/introdu%C3%A7%C3%A3o)
+- [Card Tokenization](https://docs.beehivehub.io/quickstart)
 
 ## Testing
 
@@ -408,7 +409,7 @@ BeehiveHubClient beehive = new BeehiveHubClient(System.getenv("BEEHIVE_SECRET_KE
 For suggestions, bug reports, or questions:
 
 - **Email:** [contato@paybeehive.com.br](mailto:contato@paybeehive.com.br)
-- **Documentation:** [https://paybeehive.readme.io](https://paybeehive.readme.io)
+- **Documentation:** [https://docs.beehivehub.io](https://docs.beehivehub.io/)
 
 ## License
 
