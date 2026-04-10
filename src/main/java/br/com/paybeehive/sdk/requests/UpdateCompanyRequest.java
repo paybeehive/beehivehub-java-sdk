@@ -9,39 +9,59 @@ public class UpdateCompanyRequest {
     @JsonProperty("invoice_descriptor")
     private String invoiceDescriptor;
 
-    @JsonProperty("average_revenue")
-    private Long averageRevenue;
-
-    @JsonProperty("average_ticket")
-    private Long averageTicket;
-
-    @JsonProperty("product_info")
-    private String productInfo;
-
-    private String website;
-    private String email;
-    private String phone;
+    private Details details;
 
     public UpdateCompanyRequest() {}
 
     public String getInvoiceDescriptor() { return invoiceDescriptor; }
     public void setInvoiceDescriptor(String invoiceDescriptor) { this.invoiceDescriptor = invoiceDescriptor; }
 
-    public Long getAverageRevenue() { return averageRevenue; }
-    public void setAverageRevenue(Long averageRevenue) { this.averageRevenue = averageRevenue; }
+    public Details getDetails() { return details; }
+    public void setDetails(Details details) { this.details = details; }
 
-    public Long getAverageTicket() { return averageTicket; }
-    public void setAverageTicket(Long averageTicket) { this.averageTicket = averageTicket; }
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public static class Details {
 
-    public String getProductInfo() { return productInfo; }
-    public void setProductInfo(String productInfo) { this.productInfo = productInfo; }
+        @JsonProperty("average_revenue")
+        private Long averageRevenue;
 
-    public String getWebsite() { return website; }
-    public void setWebsite(String website) { this.website = website; }
+        @JsonProperty("average_ticket")
+        private Long averageTicket;
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+        @JsonProperty("physical_products")
+        private Boolean physicalProducts;
 
-    public String getPhone() { return phone; }
-    public void setPhone(String phone) { this.phone = phone; }
+        @JsonProperty("products_description")
+        private String productsDescription;
+
+        @JsonProperty("site_url")
+        private String siteUrl;
+
+        private String phone;
+
+        private String email;
+
+        public Details() {}
+
+        public Long getAverageRevenue() { return averageRevenue; }
+        public void setAverageRevenue(Long averageRevenue) { this.averageRevenue = averageRevenue; }
+
+        public Long getAverageTicket() { return averageTicket; }
+        public void setAverageTicket(Long averageTicket) { this.averageTicket = averageTicket; }
+
+        public Boolean getPhysicalProducts() { return physicalProducts; }
+        public void setPhysicalProducts(Boolean physicalProducts) { this.physicalProducts = physicalProducts; }
+
+        public String getProductsDescription() { return productsDescription; }
+        public void setProductsDescription(String productsDescription) { this.productsDescription = productsDescription; }
+
+        public String getSiteUrl() { return siteUrl; }
+        public void setSiteUrl(String siteUrl) { this.siteUrl = siteUrl; }
+
+        public String getPhone() { return phone; }
+        public void setPhone(String phone) { this.phone = phone; }
+
+        public String getEmail() { return email; }
+        public void setEmail(String email) { this.email = email; }
+    }
 }

@@ -37,9 +37,13 @@ class BankAccountsResourceTest {
 
         CreateBankAccountRequest req = new CreateBankAccountRequest();
         req.setBankCode("341");
-        req.setAgency("0001");
-        req.setAccount("12345-6");
-        req.setType("checking");
+        req.setAgencyNumber("0001");
+        req.setAccountNumber("12345");
+        req.setAccountDigit("6");
+        req.setType("conta_corrente");
+        req.setLegalName("Empresa Teste Ltda");
+        req.setDocumentNumber("60572883000136");
+        req.setDocumentType("cnpj");
         BankAccount result = resource.create(20L, req);
 
         assertEquals("341", result.getBankCode());

@@ -11,19 +11,37 @@ public class BankAccount {
     @JsonProperty("bank_code")
     private String bankCode;
 
-    private String agency;
-    private String account;
-    private String type;
-    private Document document;
+    @JsonProperty("agency_number")
+    private String agencyNumber;
 
-    @JsonProperty("recipient_id")
-    private Long recipientId;
+    @JsonProperty("agency_digit")
+    private String agencyDigit;
+
+    @JsonProperty("account_number")
+    private String accountNumber;
+
+    @JsonProperty("account_digit")
+    private String accountDigit;
+
+    private String type;
+
+    @JsonProperty("legal_name")
+    private String legalName;
+
+    @JsonProperty("document_number")
+    private String documentNumber;
+
+    @JsonProperty("document_type")
+    private String documentType;
+
+    @JsonProperty("is_active")
+    private Boolean isActive;
+
+    @JsonProperty("is_visible")
+    private Boolean isVisible;
 
     @JsonProperty("created_at")
     private String createdAt;
-
-    @JsonProperty("updated_at")
-    private String updatedAt;
 
     public BankAccount() {}
 
@@ -33,24 +51,36 @@ public class BankAccount {
     public String getBankCode() { return bankCode; }
     public void setBankCode(String bankCode) { this.bankCode = bankCode; }
 
-    public String getAgency() { return agency; }
-    public void setAgency(String agency) { this.agency = agency; }
+    public String getAgencyNumber() { return agencyNumber; }
+    public void setAgencyNumber(String agencyNumber) { this.agencyNumber = agencyNumber; }
 
-    public String getAccount() { return account; }
-    public void setAccount(String account) { this.account = account; }
+    public String getAgencyDigit() { return agencyDigit; }
+    public void setAgencyDigit(String agencyDigit) { this.agencyDigit = agencyDigit; }
+
+    public String getAccountNumber() { return accountNumber; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+
+    public String getAccountDigit() { return accountDigit; }
+    public void setAccountDigit(String accountDigit) { this.accountDigit = accountDigit; }
 
     public String getType() { return type; }
     public void setType(String type) { this.type = type; }
 
-    public Document getDocument() { return document; }
-    public void setDocument(Document document) { this.document = document; }
+    public String getLegalName() { return legalName; }
+    public void setLegalName(String legalName) { this.legalName = legalName; }
 
-    public Long getRecipientId() { return recipientId; }
-    public void setRecipientId(Long recipientId) { this.recipientId = recipientId; }
+    public String getDocumentNumber() { return documentNumber; }
+    public void setDocumentNumber(String documentNumber) { this.documentNumber = documentNumber; }
+
+    public String getDocumentType() { return documentType; }
+    public void setDocumentType(String documentType) { this.documentType = documentType; }
+
+    public Boolean getIsActive() { return isActive; }
+    public void setIsActive(Boolean isActive) { this.isActive = isActive; }
+
+    public Boolean getIsVisible() { return isVisible; }
+    public void setIsVisible(Boolean isVisible) { this.isVisible = isVisible; }
 
     public String getCreatedAt() { return createdAt; }
     public void setCreatedAt(String createdAt) { this.createdAt = createdAt; }
-
-    public String getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(String updatedAt) { this.updatedAt = updatedAt; }
 }

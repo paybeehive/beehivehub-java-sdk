@@ -24,8 +24,8 @@ public class Transaction {
     @JsonProperty("delivery_status")
     private Object deliveryStatus;
 
-    @JsonProperty("webhook_url")
-    private String webhookUrl;
+    @JsonProperty("postback_url")
+    private String postbackUrl;
 
     private Map<String, String> metadata;
 
@@ -64,8 +64,8 @@ public class Transaction {
     public Object getDeliveryStatus() { return deliveryStatus; }
     public void setDeliveryStatus(Object deliveryStatus) { this.deliveryStatus = deliveryStatus; }
 
-    public String getWebhookUrl() { return webhookUrl; }
-    public void setWebhookUrl(String webhookUrl) { this.webhookUrl = webhookUrl; }
+    public String getPostbackUrl() { return postbackUrl; }
+    public void setPostbackUrl(String postbackUrl) { this.postbackUrl = postbackUrl; }
 
     public Map<String, String> getMetadata() { return metadata; }
     public void setMetadata(Map<String, String> metadata) { this.metadata = metadata; }
