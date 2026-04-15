@@ -10,7 +10,7 @@ public final class BeehiveHubConstants {
     public static final String PRODUCTION_PAYMENT_LINK_URL = "https://link.conta.paybeehive.com.br";
     public static final String SANDBOX_PAYMENT_LINK_URL = "https://link.sandbox.hopysplit.com.br";
 
-    public static final String DOCS_URL = "https://paybeehive.readme.io/reference";
+    public static final String DOCS_URL = "https://docs.beehivehub.io";
 
     public static final String USER_AGENT = "beehivehub-java-sdk/" + VERSION;
 
