@@ -1,7 +1,6 @@
 package br.com.paybeehive.sdk.requests;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreatePaymentLinkRequest {
@@ -28,20 +27,11 @@ public class CreatePaymentLinkRequest {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Settings {
 
-        @JsonProperty("default_payment_method")
         private String defaultPaymentMethod;
-
-        @JsonProperty("request_address")
         private Boolean requestAddress;
-
-        @JsonProperty("request_phone")
         private Boolean requestPhone;
-
-        @JsonProperty("request_document")
         private Boolean requestDocument;
-
         private Boolean traceable;
-
         private CardSettings card;
         private PixSettings pix;
         private BoletoSettings boleto;
@@ -75,9 +65,7 @@ public class CreatePaymentLinkRequest {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public static class CardSettings {
             private Boolean enabled;
-            @JsonProperty("free_installments")
             private Integer freeInstallments;
-            @JsonProperty("max_installments")
             private Integer maxInstallments;
 
             public CardSettings() {}
@@ -92,7 +80,6 @@ public class CreatePaymentLinkRequest {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public static class PixSettings {
             private Boolean enabled;
-            @JsonProperty("expires_in_days")
             private Integer expiresInDays;
 
             public PixSettings() {}
@@ -105,7 +92,6 @@ public class CreatePaymentLinkRequest {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public static class BoletoSettings {
             private Boolean enabled;
-            @JsonProperty("expires_in_days")
             private Integer expiresInDays;
 
             public BoletoSettings() {}

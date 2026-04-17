@@ -1,14 +1,11 @@
 package br.com.paybeehive.sdk.requests;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UpdateCompanyRequest {
 
-    @JsonProperty("invoice_descriptor")
     private String invoiceDescriptor;
-
     private Details details;
 
     public UpdateCompanyRequest() {}
@@ -22,23 +19,12 @@ public class UpdateCompanyRequest {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Details {
 
-        @JsonProperty("average_revenue")
         private Long averageRevenue;
-
-        @JsonProperty("average_ticket")
         private Long averageTicket;
-
-        @JsonProperty("physical_products")
         private Boolean physicalProducts;
-
-        @JsonProperty("products_description")
         private String productsDescription;
-
-        @JsonProperty("site_url")
         private String siteUrl;
-
         private String phone;
-
         private String email;
 
         public Details() {}
