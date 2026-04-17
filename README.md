@@ -145,10 +145,29 @@ beehive.transactions.updateDelivery(123456L, request);
 #### Create a customer
 
 ```java
+import br.com.paybeehive.sdk.models.Address;
+import br.com.paybeehive.sdk.models.Document;
+
+Address address = new Address();
+address.setStreet("Av. Paulista");
+address.setStreetNumber("1578");
+address.setComplement("Apto 101");
+address.setNeighborhood("Bela Vista");
+address.setZipCode("01310100");
+address.setCity("Sao Paulo");
+address.setState("SP");
+address.setCountry("br");
+
+Document document = new Document();
+document.setType("cpf");
+document.setNumber("98765432100");
+
 CreateCustomerRequest request = new CreateCustomerRequest();
 request.setName("Maria Santos");
 request.setEmail("maria@example.com");
 request.setPhone("11988888888");
+request.setDocument(document);
+request.setAddress(address);
 
 Customer customer = beehive.customers.create(request);
 ```
