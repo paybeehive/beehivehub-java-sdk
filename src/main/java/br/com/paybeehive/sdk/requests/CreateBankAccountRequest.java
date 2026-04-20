@@ -1,32 +1,17 @@
 package br.com.paybeehive.sdk.requests;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateBankAccountRequest {
 
-    @JsonProperty("bank_code")
     private String bankCode;
-
-    @JsonProperty("agency_number")
     private String agencyNumber;
-
-    @JsonProperty("account_number")
     private String accountNumber;
-
-    @JsonProperty("account_digit")
     private String accountDigit;
-
     private String type;
-
-    @JsonProperty("legal_name")
     private String legalName;
-
-    @JsonProperty("document_number")
     private String documentNumber;
-
-    @JsonProperty("document_type")
     private String documentType;
 
     public CreateBankAccountRequest() {}

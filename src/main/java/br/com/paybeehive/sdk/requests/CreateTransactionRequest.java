@@ -1,7 +1,6 @@
 package br.com.paybeehive.sdk.requests;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 import java.util.Map;
@@ -10,13 +9,8 @@ import java.util.Map;
 public class CreateTransactionRequest {
 
     private Long amount;
-
-    @JsonProperty("payment_method")
     private String paymentMethod;
-
     private Integer installments;
-
-    @JsonProperty("postback_url")
     private String postbackUrl;
 
     private Map<String, Object> metadata;

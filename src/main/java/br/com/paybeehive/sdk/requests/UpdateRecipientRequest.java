@@ -2,17 +2,12 @@ package br.com.paybeehive.sdk.requests;
 
 import br.com.paybeehive.sdk.models.Document;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UpdateRecipientRequest {
 
-    @JsonProperty("legal_name")
     private String legalName;
-
     private Document document;
-
-    @JsonProperty("transfer_settings")
     private Object transferSettings;
 
     public UpdateRecipientRequest() {}

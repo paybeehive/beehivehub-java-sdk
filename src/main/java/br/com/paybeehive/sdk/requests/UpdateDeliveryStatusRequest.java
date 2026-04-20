@@ -1,16 +1,12 @@
 package br.com.paybeehive.sdk.requests;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UpdateDeliveryStatusRequest {
 
     private String status;
-
-    @JsonProperty("tracking_code")
     private String trackingCode;
-
     private String carrier;
 
     public UpdateDeliveryStatusRequest() {}
