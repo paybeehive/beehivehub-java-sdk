@@ -409,9 +409,10 @@ BeehiveHubClient beehive = new BeehiveHubClient(System.getenv("BEEHIVE_SECRET_KE
 
 ## Additional Documentation
 
-- [Official API Documentation](https://docs.beehivehub.io/api-reference/transa%C3%A7%C3%B5es/listar-transa%C3%A7%C3%B5es)
-- [Integration Guide](https://docs.beehivehub.io/introdu%C3%A7%C3%A3o)
+- [Official API Documentation](https://docs.beehivehub.io)
+- [Integration Guide](https://docs.beehivehub.io/api-reference)
 - [Card Tokenization](https://docs.beehivehub.io/quickstart)
+- [Postback Format](https://docs.beehivehub.io/webhook)
 
 ## Testing
 
