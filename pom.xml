@@ -6,7 +6,7 @@
 
     <groupId>br.com.paybeehive</groupId>
     <artifactId>beehivehub-java-sdk</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>BeehiveHub Java SDK</name>
